@@ -12,30 +12,29 @@ namespace LinkedListProgram
         {
             //Welcome Message
             Console.WriteLine("----Welcome to Linked List Program----");
-            //Calling Class LinkedList
+
             //Calling Class LinkedList
             LinkedList linkedList = new LinkedList();
-            linkedList.Append(56);
-            linkedList.Append(70);
+            linkedList.Add(56);
+            linkedList.Add(30);
+            linkedList.Add(70);
 
-            //Display Data Before Adding into  Linked List
+            //Display Data Before Delete First element 
             Console.WriteLine("-----------------------------------------------");
-            Console.WriteLine("Display Data Before Adding into  Linked List ::");
+            Console.WriteLine("Display Data Before Delete First element ::");
             Console.WriteLine("-----------------------------------------------");
             linkedList.Display();
 
-            //Adding Data Between 2 Data
-            linkedList.InsertAtParticularPosition(2, 30);
+            //Delete First Element
+            linkedList.POP();
 
-            //Display Data After Adding into  Linked List
+            //Display Data After Delete First element 
             Console.WriteLine("-----------------------------------------------");
-            Console.WriteLine("Display Data Before Adding into  Linked List ::");
+            Console.WriteLine("Display Data After Delete First element ::");
             Console.WriteLine("-----------------------------------------------");
 
             linkedList.Display();
-
             Console.ReadLine();
-
         }
     }
 }

@@ -11,8 +11,8 @@ namespace LinkedListProgram
           //Instance
             internal Node head;
 
-        //Appending Data to LinkedList
-        internal void Append(int data)
+        //Adding Data to LinkedList
+        internal void Add(int data)
         {
             //Object of Node
             Node node = new Node(data);
@@ -54,6 +54,15 @@ namespace LinkedListProgram
                 node.next = temp.next;
                 temp.next = node;
             }
+        }
+
+        //Delete First element 
+        internal Node POP()
+        {
+            if (this.head == null)
+                return null;
+            this.head = this.head.next;
+            return this.head;
         }
 
         //Display LinkedList Data Through Method
