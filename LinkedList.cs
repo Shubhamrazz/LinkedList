@@ -30,8 +30,34 @@ namespace LinkedListProgram
                 temp.next = node;
             }
         }
-            //Display LinkedList Data
-            internal void Display()
+
+        //Adding Data In Particular Position
+        public void InsertAtParticularPosition(int position, int data)
+        {
+            Node node = new Node(data);
+            if (position < 1)
+                Console.WriteLine("Invalid Position");
+            else if (position == 1)
+            {
+                node.next = head;
+                head = node;
+            }
+            else
+            {
+                Node temp = head;
+
+                while (position > 2)
+                {
+                    temp = temp.next;
+                    position--;
+                }
+                node.next = temp.next;
+                temp.next = node;
+            }
+        }
+
+        //Display LinkedList Data Through Method
+        internal void Display()
             {
                 //Head is Null then List is empty otherwise print All data of Linked List
                 if (this.head == null)
